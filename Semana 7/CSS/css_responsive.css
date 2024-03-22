@@ -1,0 +1,213 @@
+*{
+    box-sizing: border-box;
+    margin: 0; /*Inicializa margenes*/
+    padding: 0; /*Inicializa padding*/ 
+}
+html{
+    max-height: 100%; /* se adapte pag web a altura cualq dispositivo*/
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    background-image: url(../IMG/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*sección cabecera PC*/
+#header{
+    background-color: lightskyblue;
+    border: 2px solid blue;
+    border-radius: 20px 20px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;/* nombre contenedor CSS GRID*/
+}
+ul{
+    padding: 0;
+    margin: 0 1px;
+}
+li{
+    list-style: none;
+    margin: 0 5px;
+    font: bold 12px Verdana;
+}
+a{
+color: white;
+text-decoration: none;/* Quita subrayado*/
+}
+/* seccion estilos <nav> */
+#menu{
+grid-area: nav;/* nombre contenedor CSS GRID*/
+background-color: blue;
+border: 2px solid yellowgreen;
+border-radius: 22px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 5px;
+margin: 5px;
+}
+/* seccion estilos menu y submenu <nav> */
+.menuB>li{
+    position: relative;
+    display: inline-block;
+}
+.menuB>li>a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menuB li a:hover{
+    color:lightgreen;
+    transition: all .3s;
+}
+/* Submenu */
+.submenu{
+    position: absolute;
+    background-color: blue;
+    width: 120%;
+    display: none;/Ocultar submenu/
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+.menuB li:hover .submenu{/* activar submenu respectivo*/
+    display: block;
+    z-index: 100;
+}
+.buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 0px;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: ease 0.8s;
+}
+.buscarbox input:hover{/* Evento de amplia ancho en buscador*/
+    width: 150px;
+    padding-left: 10px;
+    outline: none;
+}
+/* seccion estilos contenido <section> */
+#main{
+    grid-area: main;
+    border:2px solid yellowgreen;
+    border-radius: 22px;
+    max-width: 100%;
+    height: auto;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);/Efecto glass transparencia/
+}
+figure{
+    display: inline;
+    margin:45px;
+    padding: 5px;
+}
+.programa{
+    display: inline-block;
+    margin:5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    border-radius: 22px;
+    position: relative;
+    border: 1px solid black;
+
+}
+section article{
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter:blur(5px);
+    margin: 20px;
+}
+/* seccion estilos <aside> barra lateral */
+#sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+/* seccion de estilos <footer> */
+#footer{
+    grid-area: footer;
+    padding-top: 20px;
+    border: 2px solid yellowgreen;
+    border-radius: 22px;
+    clear: both;/cancelar position de arriba pagina/
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(1.5);
+}
+/* seccion de estilos de iconos redes sociales fontawesome */
+i[class^="fa"]{
+    color:grey;
+    font-size: 18px;
+}
+i[class^="fab"]{
+    color:grey;
+    font-size: 30px;
+    border:1px solid transparent;
+    margin: 0px;
+}
+/*sección CSS GRIB DISEÑO WEB RESPONSIVE*/
+/*Se defina estilos al contenedor grid en general vista PC*/
+#grid-container > * {
+    text-align: center;
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    }
+/*Se define estilos al contenedor grid en general vista PC a 3 COLUMNAS.*/
+#grid-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template:
+    ¨header header header¨ 150px
+    ¨nav nav nav¨ 50px
+    ¨main main sidebar¨ 300px
+    ¨main main sidebar¨ 300px
+    ¨main main sidebar¨ 300px
+    ¨footer footer footer¨ 150px /
+    1000px 150px 300px;
+}
+/*----- SECCIÓN VISTA E TABLETAS   2 COLUMNAS------*/
+@media (max-width:1024px){
+    #grid-container{
+        grid-template:
+        "header header" 170px
+        "nav main" 800px
+        "nav main" 700px
+        "sidebar sidebar" 650px
+        "footer footer" 100px /
+        250px 450px;
+        font-size: 75%;/*Cambia el tamaño de la letra*/    
+    }
+    #menu{
+        background-color: blue;
+        border-radius: 22px;
+        display: block;
+        padding: 45px;
+        margin: 40px;
+        height: auto;
+        text-align: center;
+    }
+}
