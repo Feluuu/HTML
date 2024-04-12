@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIPO SALIDAS JS</title>
+</head>
+<body>
+    <center>
+        <h1>TALLER MANEJO DE SALIDAS VARIABLES JS</h1>
+        <h2>TIPOS: CONSOLE.LOG-ALERT-CONFIRM-DOCUMENT.WRITE</h2>
+        <br><br>
+        <script>
+            //ASIGNACION DE VARIABLES 
+            let mensaje="VAMOS A SEGUIR APRENDIENDO JAVASCRIPT";
+            let nombre_std="Mafel";
+             //SALIDAS
+             alert(mensaje+"\n"+nombre_std);
+            confirm(nombre_std+"\n"+"PULSA TECLA...");
+            document.write(mensaje+"<br>"+nombre_std);
+            console.log(mensaje+" "+nombre_std);
+        </script>            
+    </center>
+</body>
+</html>
