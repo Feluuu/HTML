@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SESION CLAVE</title>
+            <!-- link de sitio sweetalert mensajes más elegantes-->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head> 
+<body>
+    <center>
+        <h1>INGRESO DE USUARIO CON CONTRASEÑA</h1>
+        <h2>SISTEMA DE INFORMACION BANCO NUBANK</h2>
+        <h3>SOLO SE PERMITEN TRES (3) INTENTOS</h3>
+        <br><br>
+        <script>
+            var pasw2;
+            var sw=0;//variable de control - estado apagada
+            var clave=12345;
+            //CICLO FOR
+            for(f=1;f<=3;f++)
+            {
+                pasw2=parseInt(prompt("INGRESE CONTRASEÑA DE INGRESO"));
+                //CONDICIONAL 
+                if(pasw2==clave)
+                {
+                    swal("APRECIADO USUARIO","ACCESO OTORGADO","success");
+                    sw=1;//var control de ingreso - estado activada
+                    break;
+                }
+            }
+            //salida
+            if(sw==0){
+                swal("APRECIADO USUARIO","ACCESO BLOQUEADO","error");
+                document.write("<font color='red'>"+"SU ACCESO HA SIDO BLOQUEADO...ESPERE 1 MINUTO..."+"</font>");
+            }else{
+                document.write("<font color='blue'>"+"BIENVENIDO AL SISTEMA DE GESTION NUBANK"+"</font>");
+            }
+        </script>
+    </center>
+</body>
+</html>

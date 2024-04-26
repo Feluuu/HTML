@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTURA VENTAS POS</title>
+    <!-- link de sitio sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/Javascript.jpeg" alt="" width="250" height="150">
+        <h1>SUPERMERCADO MERKACOSTA</h1>
+        <h2>LIQUIDACION DE FACTURA DE VENTAS POS</h2>
+        <h3>SOMOS LOS MEJORES EN CALIDAD Y PRECIO</h3>
+        <br><br>
+        <script>
+            var nombrep;
+            var suma=0;
+            var subt=0;
+            var netop=0;
+            var desc=0;
+            var iva=0;
+            var num=1; //contador de productos comprados
+            var opc=true;//var booleana -  controla la facturacion ciclo WHILE
+            nombre_std=prompt("INGRESE NOMBRE ESTUDIANTE");
+            //CICLO WHILE = TRUE
+            while(opc==true){
+                nombrep=prompt("INGRESE NOMBRE PRODUCTO A COMPRAR");
+                precio=parseFloat(prompt("INGRESE PRECIO PRODUCTO.."));
+                cant=parseFloat(prompt("INGRESE CANTIDAD"));
+                opc=confirm("DESEA SEGUIR FACTURANDO PRODUCTOS?... [ACEPTAR=SI - CANCELAR=NO]");
+                //CALCULAR VENTAS PRODUCTO
+                subt=precio*cant;
+                suma+=subt;//totalizador de ventas
+                num++;//contador
+            }
+            //CALCULAR DATOS FINALES
+            desc=suma*0.10;//10% descuento
+            iva=(suma-desc)*0.19;//19% iva
+            netop=suma-desc+iva;
+            swal("APRECIADO CLIENTE","GRACIAS POR SU COMPRA","success")
+            //SALIDA
+        document.write('******************************************'+'<br>');
+        document.write('**********'+'ALMACEN MERKACOSTA'+'**********'+'<br>'+'<br>');
+        document.write('**********'+'SU FACTURA POS:'+'**********'+'<br'+'<br>');
+        document.write('PRODUCTOS COMPRADOS:  '+(num-1)+'<br>'+'<br>');
+        document.write('SUBTOTAL:'+'<br>'+'<br>');
+        document.write(suma.toFixed(0)+'<br>'+'<br>');
+        document.write('Descuento:'+'<br>'+'<br>');
+        document.write(desc.toFixed(0)+'<br>'+'<br>');
+        document.write('Iva:'+'<br>'+'<br>');
+        document.write(iva.toFixed(0)+'<br>'+'<br>');
+        document.write('Neto a pagar'+'<br>'+'<br>');
+        document.write(netop.toFixed(0)+'<br>'+'<br>');
+        document.write('****************'+'ATENDIDO POR:'+nombre_std+'****************'+'<br>'+'<br>');
+        document.write('**********************'+'GRACIAS POR SU COMPRA:'+'**********************'+'<br>');
+        </script>
+    </center>
+</body>
+</html>
