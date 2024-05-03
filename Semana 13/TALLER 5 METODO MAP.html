@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY 5 </title>
+    <!-- link de sitio sweet alert mensajes más elegantes-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>TALLER METODO MAP ARRAYS</h1>
+        <h2>TRANSFROMA Y REORGANIZA INDICES EN ARRAYS</h2>
+        <br><br>
+        <script>
+            //
+            let array=[10,20,30,40,50];
+            //
+            let nuevosIndices=[4,3,2,1,0];
+            //
+            let nuevoArray=nuevosIndices.map(index=>array[index]);
+            //salida final
+            document.write("array inicial.."+array);
+            console.log(array);
+            document.write("<br>"+"<br>");
+            //
+            document.write("*******************************************"+"<br>");
+            document.write("nuevo array redondeado"+nuevoArray);
+            console.log(nuevoArray);
+        </script>
+    </center>
+    
+</body>
+</html>

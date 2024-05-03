@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY 3</title>
+    <!-- link de sitio sweet alert mensajes más elegantes-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>TALLER METODO INDEFOX</h1>
+        <h2>BUSQUEDA DE ELEMENTOS ARRAYS</h2>
+        <br><br>
+        <p>Estudiante se encuentra en indice No.</p>
+        <p id="std"></p>
+        <script>
+            let std=new Array(); //crear objeto Array
+            //captura longitud
+            let num=parseInt(prompt("INGRESE TOPE MAXIMO A GUARDAR"));
+            //CAPTURA DATOS
+            for(i=0;i<num;i++){
+                std[i]=prompt("INGRESE NOMBRE A BUSCAR");
+            }
+            //CAPTURA NOMBRE A BUSCAR
+            let buscar=prompt("INGRESE NOMBRE A BUSCAR");
+            //BUSQUEDA CON idexDF de nombre en array
+            let find=std.indexOf(buscar.trin());
+            //condicional
+            if(find>-1){
+                document.getElementById("std").innerHTML=find+"..."+buscar;
+                swal("Apreciado usuario","NOMBRE ENCONTRADO EN ARRAYS","Success");
+            }else{
+                document.getElementById("std").innerHTML=find+"EROR ..NOMBRE NO ENCONTRADO"+buscar;
+                swal("Apreciado usuario","NOMBRE NO ENCONTRADO EN ARRAYS","error");
+            }
+        </script>
+
+
+    </center>
+    
+</body>
+</html>

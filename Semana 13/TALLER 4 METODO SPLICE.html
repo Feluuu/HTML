@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 4</title>
+    <!-- link de sitio sweet alert mensajes más elegantes-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>TALLER METODO SPLICE JS</h1>
+        <h2>BUSQUEDA Y ELIMINACION DE ELEMENTOS DE ARRAYS</h2>
+        <br><br>
+        <script>
+            let std=new Array();
+            let num=prompt("ingrese tope maximo");
+            //
+            for(i=0;i<num;i++){
+                std[i]=prompt("ingrese nombre a guardar");
+            }
+            //
+            let borrar=prompt("ingrese nombre a borrar");
+            //localizar
+            let find=std.indexOf(borrar.trim());
+            //
+            if(find>-1){
+                swal("apreciado usuario","nombre eliminado de arrays","success");
+                var index=std.splice(find,1);
+            }else{
+                swal("apreciado usuario","nombre no encontrado en arrays","error");
+            }
+            //
+            document.write(std+",");
+        </script>
+
+    </center>
+    
+</body>
+</html>
