@@ -1,0 +1,40 @@
+body{
+
+    background-color: darkcyan;
+    
+    }
+    
+    h1 {
+    
+    color: white;
+    
+    text-align: center;
+    
+    font-size: 100px;
+    
+    }
+    
+    form {
+    
+    color: black;
+    
+    font-size: 200px;
+    
+    text-align:center;
+    
+    }
+    
+    input {
+    
+    border-radius: 35px;
+    
+    width: 580px;
+    }   
+
+    #hora{
+
+    text-align: center;
+
+    font-size: 100px;
+
+}

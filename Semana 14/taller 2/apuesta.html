@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuesta Random</title>
+    <!--link sitio sweet alert mensajes mas elegantes-->
+     <link rel="stylesheet" href="./css/random.css">
+    <script src="./js/random.js"></script>
+</head>
+<body>
+    <center>
+        <h1>APUESTAS JS</h1>
+        <h2>DAR CLIC AL BOTON APOSTAR</h2>
+        <br><br>
+        <form action="">
+            <label for="">Numero Apostado</label>
+            <input type="text" id="apostado" disabled>
+            <br><br>
+            <label for="">Numero Random Sistema</label>
+            <input type="text" id="resultado" disabled>
+            <br><br>
+            <label for="">Cantidad De Intentos</label>
+            <input type="text" id="salida" disabled>
+        </form>
+        <br><br>
+        <div id="boton">
+            <button onclick="apostar();">APOSTAR</button>
+            <button onclick="cancel();">CANCELAR</button>
+        </div>
+    </center>
+</body>
+</html>

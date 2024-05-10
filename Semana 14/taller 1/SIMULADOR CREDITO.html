@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Credito</title>
+    <!-- enlace css -->
+    <link rel="stylesheet" href="./css/simulador.css">
+    <!-- enlace js-->
+    <script src="./js/simulador.js"></script>
+</head>
+<body>
+    <center>
+    <div class="container">
+        <form action="" class="form">
+            <label for="">Valor credito</label>
+            <input type="text" id="valorc" class="box">
+            <label for="">Numero de Cuotas Mensuales</label>
+            <input type="text" id="numc" class="box">
+            <label for="">Tasa de Interes Mensual</label>
+            <input type="text" id="interes" class="box">
+            <label for="">Valor Cuota a Pagar</label>
+            <input type="text" id="valora" class="box" disabled>
+            <label for="">Valor Prestamo</label>
+            <input type="text" id="valorb" class="box" disabled>
+            <!-- seccion botones -->
+            <input type="button" value="CALCULAR" class="submit" onclick="calcular()">
+            <input type="button" value="BORRAR" class="submit" onclick="limpiar()">
+        </form>
+    </center>
+    </div>
+</body>
+</html>
