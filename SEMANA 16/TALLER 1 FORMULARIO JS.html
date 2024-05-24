@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTURA</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./CSS FACTURA.css">
+</head>
+<body>
+    <center>
+        <h1>FORMULARIO FACTURA VENTAS COMIDAS RAPIDAS</h1>
+        <form action="">
+            <!-- seccion encabezado de factura -->
+            <table><caption>FACTURA DE VENTA</caption>
+                <tr><th>Nombre</th><td><input type="text" size="20"></td><th>Tipo Documento</th><th><select id="tp"><option value="cc">CC</option>
+                <option value="ce">CE</option>
+                <option value="ti">TI</option>
+                </select></th><th>No. Documento</th><td><input type="text" size="25"></td></tr>
+                <tr><th>Direccion</th><td><input type="text" id="dir" size="20"></td><th>TELEFONO</th><td><input type="text" id="tel" size="20"></td><th>Atendido por</th><td><input type="text" id="emp"size="25"></td></tr>
+                <!-- seccion detalle de factura -->
+                <tr>
+                    <th>REFERENCIA</th>
+                    <th colspan="2">DESCRIPCION</th>
+                    <th>CANTIDAD</th>
+                    <th>VALOR UNITARIO</th>
+                    <th>SUBTOTAL</th>
+                </tr>
+                <tr>
+                    <!-- 1er producto factura -->
+                    <th><select id="prod1" onchange="calcular();">
+                    <option>Seleccionar:</option>
+                    <option value="25000">Combo hamburgueza</option>
+                    <option value="20000">Combo Perro Caliente</option>
+                    <option value="35000">Combo Pizza Medium</option>
+                    </select></th>
+                    <th colspan="2"><input type="text" id="desc01" size="40"></th>
+                    <th><input type="text" id="cant01" size="10"></th>
+                    <th><input type="text" id="vau01" size="15" disabled></th>
+                    <th><input type="text" id="vat01" size="15" disabled></th>
+                </tr>
+                <!-- 2do producto factura -->
+                <tr>
+                    <th>
+                        <select id="prod2" onchange="calcular()">
+                            <option>Seleccionar:</option>
+                            <option value="25000">Combo hamburgueza</option>
+                            <option value="20000">Combo Perro Caliente</option>
+                            <option value="35000">Combo Pizza Medium</option>
+                        </select>
+                    </th>
+                    <th colspan="2"><input type="text" id="desc02" size="40"></th>
+                    <th><input type="text" id="cant02" size="10"></th>
+                    <th><input type="text" id="vau02" size="15" disabled></th>
+                    <th><input type="text" id="vat02" size="15" disabled></th>
+                </tr>
+                <!-- 3er producto factura -->
+                <tr>
+                    <th>
+                        <select id="prod3" onchange="calcular()">
+                            <option>Seleccionar:</option>
+                            <option value="25000">Combo hamburgueza</option>
+                            <option value="20000">Combo Perro Caliente</option>
+                            <option value="35000">Combo Pizza Medium</option>
+                        </select>
+                    </th>
+                    <th colspan="2"><input type="text" id="desc03" size="40"></th>
+                    <th><input type="text" id="cant03" size="10"></th>
+                    <th><input type="text" id="vau03" size="15" disabled></th>
+                    <th><input type="text" id="vat03" size="15" disabled></th>
+                </tr>
+                <!-- seccion de adicionales a pedido -->
+                <tr>
+                    <th colspan="6">ADICIONALES</th>
+                </tr>
+                <tr>
+                    <th colspan="2" rowspan="2">
+                        <img src="./img/Cerveza.jpg" alt="">
+                        <input type="radio" name="adic" id="radio4">CERVEZA... $3.000
+                    </th>
+                    <th colspan="2" rowspan="2">
+                        <img src="./img/helado.jpg" alt="">
+                        <input type="radio" name="adic" id="radio5">HELADO...$2.500
+                    </th>
+                    <th colspan="2" rowspan="2">
+                        <img src="./img/jugo-hit.png" alt="">
+                        <input type="radio" name="adic" id="radio6">JUGO ...$2.300
+                    </th>
+                </tr>
+                <!-- SECCION DE LIQUIDACION PEDIDO A PAGAR -->
+                <tr></tr>
+                <tr>
+                    <th colspan="4">TOTAL ADICIONALES</th>
+                    <th colspan="2"><input type="text" id="adic0" disabled></th>
+                </tr>
+                <tr>
+                    <th colspan="2">FORMA DE PAGO</th>
+                    <th colspan="2">
+                        <input type="radio" name="fp" id="radio1">Efectivo <br>
+                        <input type="radio" name="fp" id="radio2">Nequi <br>
+                        <input type="radio" name="fp" id="radio3">Tarjeta <br>
+                    </th>
+                    <th>SUBTOTAL</th><td><input type="text" id="subt" size="25"></td>
+                </tr>
+                <tr>
+                    <th colspan="4" rowspan="3">OBSERVACIONES: Revise su pedido y disfrute su comida rápida</th>
+                    <th>IVA</th><td><input type="text" id="iva" size="25"></td>
+                </tr>
+                <tr>
+                    <th>DESCUENTO</th><td><input type="text" id="desc" size="25"></td>
+                </tr>
+                <tr>
+                    <th>NETO</th><td><input type="text" id="neto" size="25"></td>
+                </tr>
+                <!-- seccion de botones del formulario -->
+                <tr>
+                    <th colspan="2"><input type="button" value="CALCULAR" onclick="calcular()"></th>
+                    <th colspan="2"><input type="reset" value="BORRAR"></th>
+                    <th colspan="2"><input type="button" value="ENVIAR" onclick="enviar();"></th>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <script src="./FACTURA.js"></script>
+</body>
+</html>
