@@ -1,0 +1,106 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- link fontawesome -->
+    <link rel="stylesheet" href="css/catalogo.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/catalogo.css">
+    
+    </head>
+    <body>
+    <!-- MAIN -->
+    <div class="main">
+    <h1>TIENDA MI PC.COM</h1>
+    <hr>
+    <h2>PORTAFOLIO DE TIENDA ONLINE</h2>
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Todos</button>
+      <button class="btn" onclick="filterSelection('computador')"> Computadores</button>
+      <button class="btn" onclick="filterSelection('celular')"> Celulares</button>
+      <button class="btn" onclick="filterSelection('ropa')"> Ropa Sport</button>
+    </div>
+    <div id="toggle"><!-- CAMBIO-->
+      <input type="checkbox" class="checkbox" id="chk" />
+      <label class="label" for="chk">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <!-- Portfolio Gallery Grid  Computador -->
+      <div class="column computador">
+        <div class="content">
+          <img src="img/drive-download-20240528T122402Z-001/portatiles1.jpg" alt="" style="width:250px;height:250px;">
+          <h4>Portátil HP</h4>
+          <p>AMD Athlon 4 GB RAM- SSD 256 GB</p>
+        </div>
+      </div>
+      <div class="column computador">
+        <div class="content">
+        <img src="img/drive-download-20240528T122402Z-001/portatiles2.png" alt="" style="width:250px;height:250px;">
+          <h4>Portátil HP 14"</h4>
+          <p>Intel Core i3- 4 GB RAM- DD 1TB</p>
+        </div>
+      </div>
+      <div class="column computador">
+        <div class="content">
+        <img src="img/drive-download-20240528T122402Z-001/portatiles3.jpg" alt="" style="width:250px;height:250px;">
+          <h4>Portátil ASUS VivoBook 14"</h4>
+          <p>Intel Core i5 - 8GB RAM - SSD 512 GB</p>
+        </div>
+      </div>
+        <!-- Portfolio Gallery Grid  Celular -->
+      <div class="column celular">
+        <div class="content">
+          <img src="img/drive-download-20240528T122402Z-001/cel motorola g20 128gb.jpg" alt="" style="width:250px;height:250px;">
+          <h4>Celular Motorola G20</h4>
+          <p>Celular Motorola G20 128G.</p>
+        </div>
+      </div>
+      <div class="column celular">
+        <div class="content">
+        <img src="img/drive-download-20240528T122402Z-001/cel Xiaomi Mi10T 128GNegro.jpg" style="width:250px;height:250px;">
+          <h4>Celular Xiaomi10T</h4>
+          <p>Celular Xiaomi10T 128G</p>
+        </div>
+      </div>
+      <div class="column celular">
+        <div class="content">
+        <img src="img/drive-download-20240528T122402Z-001/celular-huawei-y9A-128gb-negro.jpg" alt="" style="width:250px;height:250px;">
+          <h4>Celular Huawei Y9</h4>
+          <p>Celular Huawei Y9 4G.</p>
+        </div>
+      </div>
+        <!-- Portfolio Gallery Grid  Ropa -->
+      <div class="column ropa">
+        <div class="content">
+          <img src="img/drive-download-20240528T122402Z-001/Abrigo1.JPG" alt="" style="width:250px;height:250px;">
+          <h4>Abrigo Nike</h4>
+          <p>Abrigo Nike.</p>
+        </div>
+      </div>
+      <div class="column ropa">
+        <div class="content">
+        <img src="img/drive-download-20240528T122402Z-001/Camisa1.JPG" alt="" style="width:250px;height:250px;">
+          <h4>Camiseta Adidas</h4>
+          <p>Camiseta Adidas.</p>
+        </div>
+      </div>
+      <div class="column ropa">
+        <div class="content">
+        <img src="img/drive-download-20240528T122402Z-001/Abrigo3.JPG" alt="" style="width:250px;height:250px;">
+          <h4>Sudadera Nike</h4>
+          <p>Sudadera Nike.</p>
+        </div>
+      </div>
+    <!-- END GRID -->
+    </div>
+    <!-- END MAIN -->
+    </div>
+    <script src="js/catalogo.js"></script>
+    </body>
+    </html>
+</body>
+</html>
