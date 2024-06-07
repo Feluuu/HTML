@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLETIN</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<body>
+    <center>
+        <img src="./IMG/incap.jpeg" alt="" width="150" height="150">
+        <h1>BOLETIN NOTAS INCAP</h1>
+        <!-- link de sitiosweetalert mensajes mas elegantes -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="./CSS/estilos_tabla.css">
+        </head>
+        <body>
+        <center>
+        <h2>MATERIA PAE JAVASCRIPT</h2>
+        <h3>APROVADO MINIMO >=3.0 - EXCELENTE 5.0</h3>
+        <script>
+            let nombre=prompt("INGRESE NOMBRE DE ESTUDIANTE");
+            let curso=prompt("INGRESE EL CURSO ACTUAL");
+            let nota01=parseFloat(prompt("INGRESE PRIMERA NOTA [1-5]"));
+            let nota2=parseFloat(prompt("INGRESE SEGUNDA NOTA [1-5]"));
+            let nota3=parseFloat(prompt("INGRESE TERCERA NOTA [1-5]"));
+            //CALCULAR DEFINITIVA
+            definitiva=(nota1+nota2+nota3)/3;
+            document.write("<table><caption>RELACION NOTAS </caption><tr><th>NOMBRE</th><td>",nombre,"</td></tr><tr><th>CURSO</th><td>",curso,"</td></tr><tr><th>NOTA01</th><td>",nota1.toFixed(1),"</td></tr><tr><th>NOTA02</th><td>",nota2.toFixed(1),"</td></tr><tr><th>NOTA03</th><td>",nota3.toFixed(1),"</td></tr><tr><th>DEFINITIVA</th><td>",definitiva.toFixed(2),"</th></tr>");
+                //CONDICIONAL
+                    if(definitiva<3.0){
+                        swal("Apreciado estudiante","HAS REPROBADO MATERIA PAE","error");
+                        document.write("<tr><th>ESTADO</th><td>REPROVADO</td></tr></table>");
+                    }else{
+                        swal("Apreciado estudiante","HAS APROBADO MATERIA PAE","error");
+                        document.write("<tr><th>ESTADO</th><td>REPROVADO</td></tr></table>");
+                    }
+        </script>
+    </center>
+</body>
+</html>

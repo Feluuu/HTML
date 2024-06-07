@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASAJE TM</title>
+    <!-- link de sitio sweetalert mensajes mas elegantes -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+    <img src="./IMG/trami.jpeg" alt="" width="150" height="150">
+    <h1>VALIDAR INGRESO A SISTEMA TRANSMILENIO</h1>
+    <H2>VALOR PASAJE $2.950</H2>
+    <br><br>
+    <script>
+        const TM=2950;//valor pasaje TM
+        //entrada
+        let saldo=parseInt(prompt("INGRESE RECARGA TU LLAVE"));
+        if(saldo>=TM){
+            swal("ESTIMADO USUARIO ","INGRESE A TRASMILENIO" , "sucess")
+        document.write("BIENVENIDO A TRANSMILENIO");
+        }
+        else{
+            swal("ESTIMADO USUARIO","SALDO INSUFICIENTE" , "error")
+            document.write("RECARGUE SU TARJETA....");
+        }
+    </script>
+    </center>
+</body>
+</html>
